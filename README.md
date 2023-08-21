@@ -6,7 +6,10 @@ This folder contains all the code necessary to run a weather station with a DS18
 Two libraries will need to be installed for this code to work:
 
 (1): https://github.com/pimoroni/bmp280-python/tree/master
-(2): https://github.com/adafruit/Adafruit_Python_DHT             [NOTE: This is a deprecated library, but still works just fine on RPi]
+
+(2): https://github.com/adafruit/Adafruit_Python_DHT            [NOTE: This is a deprecated library, but still works just fine on RPi]
+
+There are a number of extra dependancies required for the Adafruit_Python_DHT repository, however these are all covered in the README. What isn't covered is that you need to install smbus in order for the BMP280 repository to work. To do this, run: sudo pip3 install smbus
 
 To set up one-wire communication for the AM2302 and DS18B20, run: sudo nano /boot/config.txt. At the bottom, add dtoverlay=w1-gpio,gpiopin=[GPIO PIN BOARD NUMBER HERE] 
 
