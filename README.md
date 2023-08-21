@@ -13,7 +13,7 @@ There are a number of extra dependancies required for the Adafruit_Python_DHT re
 
 For the BMP280 repositoy to work you need to install smbus2. To do this, run: sudo pip3 install smbus2. To make this work, you will also need I2C communication protocol enabled. To do this, run sudo raspi-config, then go to "Interface Option". Select I2C and then confirm you want it enabled.
 
-To set up one-wire communication for the AM2302 and DS18B20, run: sudo nano /boot/config.txt. At the bottom, add dtoverlay=w1-gpio,gpiopin=[GPIO PIN BOARD NUMBER HERE] 
+To set up one-wire communication for the AM2302 and DS18B20, run: sudo nano /boot/config.txt. At the bottom, add dtoverlay=w1-gpio,gpiopin=[GPIO PIN BOARD NUMBER HERE] Then, after rebooting the Raspberry Pi, run: sudo modprobe w1-gpio, and run: sudo modprobe w1-therm. This loads the correct modules to enable the Pi to talk to the temperature sensor.
 
 To run this code, first run ./dbsetup.py from the command line to initialise the database.
 Then, run ./weather_station.py to start collecting data.
