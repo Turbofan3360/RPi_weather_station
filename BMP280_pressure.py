@@ -6,6 +6,7 @@ from smbus2 import SMBus
 
 def get_pressure():
 	# Connecting to the sensor
+	# This may need to be changed to SMBus(1) depending on what version of Raspberry Pi you are using
 	bus = SMBus(0)
 	bmp280 = BMP280(i2c_dev=bus)
 
