@@ -15,6 +15,8 @@ For the BMP280 repositoy to work you need to install smbus2. To do this, run: su
 
 To set up one-wire communication for the AM2302 and DS18B20, run: sudo nano /boot/config.txt. At the bottom, add dtoverlay=w1-gpio
 
+You will also need to make sure that python-daemon is installed - run sudo pip install python-daemon - and that anvil is installed - run sudo pip install anvil-uplink.
+
 To run this code, first run ./dbsetup.py from the command line to initialise the database.
 Then, run ./weather_station.py to start collecting data.
 Finally, run ./anvil_data_collection.py to enable the anvil.works website to collect the data for display.
