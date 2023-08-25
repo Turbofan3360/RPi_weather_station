@@ -5,7 +5,7 @@
 import sqlite3
 from contextlib import closing
 
-OUTPUT_DIR = "/home/weather_station"
+OUTPUT_DIR = "/home/pi/weather_station"
 
 with closing(sqlite3.connect(OUTPUT_DIR + "/rpi_env_data.db")) as connection:
 	with closing(connection.cursor()) as cursor:
