@@ -21,4 +21,4 @@ To run this code, first run ./dbsetup.py from the command line to initialise the
 Then, run ./weather_station.py to start collecting data.
 Finally, run ./anvil_data_collection.py to enable the anvil.works website to collect the data for display.
 
-The data is all shown on the website https://creepy-lovable-chinchilla.anvil.app
+The data is all shown on an anvil.works website of your choice!
