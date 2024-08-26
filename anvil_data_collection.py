@@ -42,6 +42,7 @@ def return_data(data_time_length):
 if __name__ == "__main__":
 	with daemon.DaemonContext():
 		reset_stdoutputs()
-		anvil.server.connect("server_L5C4NTGFXHK4QZXWN7R2TKOC-UM4TWEBNZNQWRWI4")
+		anvil.server.connect(xyz)
+#		change "xyz" above to your anvil.works server ID
 		anvil.server.wait_forever()
 #	print(return_data(300))
